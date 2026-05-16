@@ -5,7 +5,7 @@ export default function Homepage() {
 
 
     const api_url = ('https://fakestoreapi.com/products')
-    const [Prodotti, setProdotti] = useState([])
+    const [prodotti, setProdotti] = useState([])
 
     useEffect(() => {
 
@@ -16,6 +16,7 @@ export default function Homepage() {
                 setProdotti(data)
             })
     }, [])
+
     return (
         <>
             <header>
@@ -23,7 +24,7 @@ export default function Homepage() {
                 <nav className="nav-bar">
 
                     <ul className="nav justify-content-center">
-                        <li><img src="" alt="" /></li>
+                        {/* <li><img src="" alt="" /></li> */}
                         <li className="link">
                             <a className=" nav-item nav-link active" aria-current="page" href="/homepage">Homepage</a>
                         </li>
@@ -42,16 +43,31 @@ export default function Homepage() {
             <main>
                 <div className="d-flex m-5">
                     <div className="row row-cols-1 row-cols-md-2 g-4">
-                        {Prodotti.map(item => (
+                        {prodotti.map(item => (
                             <div className="col" key={item.id}>
                                 <div className="card">
-                                    <img src="" alt="" />
+                                    <img src={item.image} alt="img" />
                                     <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <h5 className="card-title">{item.title}</h5>
+                                        <p className="card-text">{item.price}$</p>
+                                        <p>{item.description}</p>
+                                        <p>{item.category}</p>
+                                        <p>{item.rating.rate}</p>
+                                        <p>{item.rating.count}</p>
+
                                     </div>
                                 </div>
                             </div>
+
+                            // "id": 1,
+                            // "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                            // "price": 109.95,
+                            // "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                            // "category": "men's clothing",
+                            // "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+                            // "rating": {
+                            //     "rate": 3.9,
+                            //     "count": 120
 
                         ))
 

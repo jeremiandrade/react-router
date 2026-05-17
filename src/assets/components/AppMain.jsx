@@ -13,13 +13,13 @@ export default function AppMain() {
             })
     }, [])
     return (
-        <main >
+        <main className="bg-dark text-white">
             <div className="d-flex m-5">
-                <div className="row row-cols-1 row-cols-md-2 g-4">
+                <div className="row-cols-md-2 g-4">
                     {prodotti.map(item => (
                         <div className="col" key={item.id}>
                             <div className="card">
-                                <img src={item.image} alt={item.title} />
+                                <img className="img-prodotti" src={item.image} alt={item.title} />
                                 <div className="card-body">
                                     <h5 className="card-title"> {item.title}</h5>
                                     <p className="card-text"><strong>Price: </strong>{item.price}$</p>

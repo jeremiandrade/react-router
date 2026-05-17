@@ -4,3 +4,21 @@
 body {
     background-color: black;
 }
+
+header {
+    color: white;
+}
+
+
+footer.text-white a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+}
+
+/* Colora di grigio chiaro SOLO i paragrafi, i piccoli testi e il copyright DENTRO il footer */
+footer p {
+    color: #b5b5b5;
+}

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import AppFooter from "../components/AppFooter"
 import AppHeader from "../components/AppHeader"
 AppFooter
@@ -20,9 +21,10 @@ export default function ChiSiamo() {
                     </h1>
 
 
-                    <a href="#" className="btn text-white text-decoration-none " style={{ fontSize: '0.9rem' }}>
+                    < NavLink to="/Inscriviti" className="btn text-white text-decoration-none " style={{ fontSize: '0.9rem' }}>
                         + Iscriviti
-                    </a>
+                    </NavLink>
+
 
                 </div>
             </main>

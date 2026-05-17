@@ -13,8 +13,22 @@ export default function Homepage() {
             <AppHeader />
 
             <main>
+
                 <div className="container my-4">
-                    <div className="p-5 bg-danger text-white rounded-3 text-center">
+
+                    <div className="videoClip">
+                        <video
+                            src="https://www.pexels.com/download/video/7679830/"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-100 h-80 object-fit-cover"
+                        />
+
+                    </div>
+
+                    <div className="p-5 bg-warning text-dark  rounded-3 text-center mt-5">
 
 
                         <h1 className=" mb-3">

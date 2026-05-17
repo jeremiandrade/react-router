@@ -33,7 +33,7 @@ export default function Iscriviti() {
             <AppHeader />
 
             <main className="container text-white pt-5">
-                <form className="row g-3 mt-4">
+                <form className="row g-3 mt-2">
                     <div className="col-md-6">
                         <label className="form-label">Name</label>
 

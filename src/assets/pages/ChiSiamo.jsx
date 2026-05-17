@@ -21,7 +21,7 @@ export default function ChiSiamo() {
                     </h1>
 
 
-                    < NavLink to="/Inscriviti" className="btn text-white text-decoration-none " style={{ fontSize: '0.9rem' }}>
+                    < NavLink to="/Inscriviti" className="btn text-white text-decoration-none " style={{ fontSize: '1.2rem' }}>
                         + Iscriviti
                     </NavLink>
 

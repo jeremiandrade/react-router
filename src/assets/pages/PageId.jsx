@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export default function PageId() {
+    // const navigate = useNavigate()
     const { id } = useParams()
 
     const url_id = `https://fakestoreapi.com/products/${id}`
@@ -14,6 +15,7 @@ export default function PageId() {
             .then(data => setElement(data))
             .catch(err => {
                 console.log(err);
+                // navigate(-1)
             })
     }, [])
 
@@ -26,7 +28,7 @@ export default function PageId() {
     return (
         <>
             <div className="card">
-                <img src={element.image} alt={element.title} />
+                <img src={element?.image} alt={element?.title} />
                 <div className="card-body">
                     <h5 className="card-title"> {element?.title}</h5>
                     <p className="card-text"><strong>Price: </strong>{element?.price}$</p>
@@ -34,7 +36,7 @@ export default function PageId() {
                     <p><strong>Category:</strong> {element?.category}</p>
                     <p><strong>Rating:</strong> ⭐️ </p>
                     <p><strong>Vote:</strong> {element?.rating?.rate}</p>
-                    {/* <p><strong>Percent of votes:</strong> {element?.rating.count} </p> */}
+                    <p><strong>Percent of votes:</strong> {element?.rating?.count} </p>
 
 
                 </div>

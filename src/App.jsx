@@ -3,6 +3,7 @@ import Homepage from "./assets/pages/HomePage";
 import AppProdotti from "./assets/pages/AppProdotti";
 import ChiSiamo from "./assets/pages/ChiSiamo";
 import Iscriviti from "./assets/pages/Inscriviti";
+import PageId from "./assets/pages/PageId";
 function App() {
 
 
@@ -16,6 +17,8 @@ function App() {
           <Route path="/prodotti" element={<AppProdotti />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/Inscriviti" element={<Iscriviti />} />
+          <Route path="/pageid/:id" element={<PageId />} />
+
         </Routes>
       </BrowserRouter>
 

@@ -1,5 +1,4 @@
-
-
+import { NavLink } from "react-router-dom"
 import AppHeader from "../components/AppHeader"
 import AppFooter from "../components/AppFooter"
 
@@ -17,13 +16,13 @@ export default function Homepage() {
                 <div className="container my-4">
 
                     <div className="videoClip">
-                        <video
+                        <video className="w-100 h-80 object-fit-cover"
                             src="https://www.pexels.com/download/video/7679830/"
                             autoPlay
                             muted
                             loop
                             playsInline
-                            className="w-100 h-80 object-fit-cover"
+
                         />
 
                     </div>
@@ -45,9 +44,9 @@ export default function Homepage() {
                         </p>
 
 
-                        <a href="/prodotti" className="btn btn-light btn-lg text-danger px-4">
+                        <NavLink to="/prodotti" className="btn btn-light btn-lg text-danger px-4">
                             Guarda i Prodotti 🛍️
-                        </a>
+                        </NavLink>
 
                     </div>
                 </div>

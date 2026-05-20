@@ -1,6 +1,7 @@
 import AppHeader from "../components/AppHeader"
 import AppFooter from "../components/AppFooter"
 import { useState, useEffect } from "react"
+import { NavLink } from "react-router-dom"
 export default function Prodotti() {
     const api_url = ('https://fakestoreapi.com/products')
     const [prodotti, setProdotti] = useState([])
@@ -32,6 +33,7 @@ export default function Prodotti() {
                                         <p><strong>Rating:</strong> ⭐️ </p>
                                         <p><strong>Vote:</strong> {item.rating.rate}</p>
                                         <p><strong>Percent of votes:</strong> {item.rating.count} </p>
+                                        <NavLink to={`/pageid/${item.id}`} className=" btn btn-outline-warning">More</NavLink>
 
                                     </div>
                                 </div>

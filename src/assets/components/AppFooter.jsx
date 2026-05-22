@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 export default function AppFooter() {
     return (
         <footer className="text-white pt-5 mt-5 w-100 ">
+            <hr />
             <div className=" d-flex justify-content-around mt-5">
 
                 <ul className="list-unstyled">

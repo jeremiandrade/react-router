@@ -12,17 +12,17 @@ export default function PageId() {
     useEffect(() => {
         fetch(url_id)
             .then(res => res.json())
-            .then(data => setElement(data))
+            .then(data => {
+                setElement(data)
+                console.log(data);
+
+            })
             .catch(err => {
                 console.log(err);
-                // navigate(-1)
+                navigate()
             })
     }, [])
 
-    useEffect(() => {
-        console.log(element.image);
-
-    })
 
 
     return (

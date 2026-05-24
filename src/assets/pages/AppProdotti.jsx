@@ -2,7 +2,24 @@ import AppHeader from "../components/AppHeader"
 import AppFooter from "../components/AppFooter"
 import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
+import { useBudget } from "../../contexts/BudgetContext"
 export default function Prodotti() {
+
+    const { budgetMode } = useBudget()
+
+    const prodocts = []
+
+    function prodoct() {
+        if (budgetMode === true) {
+            return prodotti.filter(function (item) {
+                return item.price <= 30;
+            })
+        } else {
+            return prodotti
+        }
+    }
+
+
     const api_url = ('https://fakestoreapi.com/products')
     const [prodotti, setProdotti] = useState([])
 
@@ -21,7 +38,7 @@ export default function Prodotti() {
             <main>
                 <div className="d-flex m-5">
                     <div className="row row-cols-1 row-cols-md-2 g-4">
-                        {prodotti.map(item => (
+                        {prodoct().map(item => (
                             <div className="col" key={item.id}>
                                 <div className="card">
                                     <img src={item.image} alt={item.title} />

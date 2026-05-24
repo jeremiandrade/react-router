@@ -10,11 +10,11 @@ export default function ErrorPage() {
             <main>
                 <div className="error">
 
-                    <img src="" alt="" />
+
 
                     <div className="404">
                         <h1> 404</h1>
-                        <H3>Page Not Found</H3>
+                        <h3>Page Not Found</h3>
                         <p>alternatively you can visit <NavLink to="/prodotti">our Products</NavLink> or return to the <NavLink to="/">Homepage</NavLink></p>
                     </div>
                 </div>
